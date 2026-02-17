@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data
+data/
+runs_reg/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models
+*.pth
+
+# OS
+.DS_Store
+Thumbs.db
