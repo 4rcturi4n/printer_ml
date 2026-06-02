@@ -1,0 +1,11 @@
+{
+  "fold": 3,
+  "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_train.csv",
+  "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_val.csv",
+  "num_train": 69,
+  "num_val": 17,
+  "target_mean": 1.239197190978491,
+  "target_std": 0.19643997682552927,
+  "train_embeddings": "/files/private/notebooks/printer_ml/results/vjepa2_embeddings/fold_3/train_embeddings.pt",
+  "val_embeddings": "/files/private/notebooks/printer_ml/results/vjepa2_embeddings/fold_3/val_embeddings.pt"
+}

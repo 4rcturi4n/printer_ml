@@ -1,0 +1,21 @@
+{
+  "fold": 4,
+  "best_epoch": 4,
+  "best_val_mae_phys": 0.3666241765022278,
+  "history_csv": "/files/private/notebooks/printer_ml/results/dinov2_saved_folds/fold_4/history.csv",
+  "model_best": "/files/private/notebooks/printer_ml/results/dinov2_saved_folds/fold_4/model_best.pth",
+  "target_mean": 1.2338757365559598,
+  "target_std": 0.1996480386366656,
+  "num_train": 69,
+  "num_val": 17,
+  "crop_box": [
+    974,
+    282,
+    1906,
+    970
+  ],
+  "stopped_early": true,
+  "stop_epoch": 12,
+  "early_stopping_patience": 8,
+  "min_delta": 0.0
+}

@@ -1,0 +1,17 @@
+{
+  "save_dir": "baseline_reg_ml",
+  "results_csv": "baseline_reg_ml/results_reg_ml.csv",
+  "seed": 0,
+  "y_phys_col": "axial_resolution",
+  "y_log_col": null,
+  "split_col": null,
+  "group_col": null,
+  "log_base": "e",
+  "lc_train_sizes": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "split_dir": "printer_ml/data/processed/kfold_splits",
+  "out_dir": "printer_ml/results/vjepa2_kfold",
+  "video_col": "video_path",
+  "target_col": "axial_resolution",
+  "n_splits": 5,
+  "hf_model_name": "facebook/vjepa2-vitl-fpc64-256",
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "freeze_backbone": true,
+  "num_frames": 64,
+  "image_size": 256,
+  "crop_box": null,
+  "use_log_target": true,
+  "epochs": 50,
+  "batch_size": 1,
+  "num_workers": 2,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "patience": 8,
+  "seed": 42
+}

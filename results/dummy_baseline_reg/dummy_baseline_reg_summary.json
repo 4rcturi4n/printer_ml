@@ -1,0 +1,31 @@
+{
+  "baseline": "train_mean_log",
+  "n_splits": 5,
+  "results_csv": "results/dummy_baseline_reg/dummy_baseline_reg.csv",
+  "metrics": {
+    "val_mae_log": {
+      "mean": 0.14025161704372646,
+      "std": 0.026407715594510824
+    },
+    "val_rmse_log": {
+      "mean": 0.18545333373725167,
+      "std": 0.05764424963749903
+    },
+    "bias_log": {
+      "mean": 3.009937697270107e-05,
+      "std": 0.02720213458419624
+    },
+    "val_mae_phys": {
+      "mean": 0.46344413974519244,
+      "std": 0.06409696414584486
+    },
+    "val_rmse_phys": {
+      "mean": 0.5680365882044165,
+      "std": 0.10668442195363066
+    },
+    "bias_phys": {
+      "mean": -0.05668594624171715,
+      "std": 0.06366509415193776
+    }
+  }
+}

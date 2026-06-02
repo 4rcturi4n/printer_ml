@@ -1,0 +1,29 @@
+{
+  "fold": 3,
+  "best_epoch": 10,
+  "best_val_loss": 0.2993077740073204,
+  "best_val_mae_phys": 0.38988202810287476,
+  "best_val_rmse_phys": 0.5308974723254208,
+  "best_bias_phys": 0.06950082629919052,
+  "history_csv": "/files/private/notebooks/printer_ml/results/x3d_l_saved_folds/fold_3/history.csv",
+  "model_best": "/files/private/notebooks/printer_ml/results/x3d_l_saved_folds/fold_3/model_best.pth",
+  "val_predictions_best": "/files/private/notebooks/printer_ml/results/x3d_l_saved_folds/fold_3/val_predictions_best.csv",
+  "train_embedding_path": "/files/private/notebooks/printer_ml/results/x3d_l_saved_folds/embeddings/fold_3/train_embeddings.pt",
+  "val_embedding_path": "/files/private/notebooks/printer_ml/results/x3d_l_saved_folds/embeddings/fold_3/val_embeddings.pt",
+  "target_mean": 1.239197190978491,
+  "target_std": 0.19643997682552927,
+  "num_train": 69,
+  "num_val": 17,
+  "crop_box": [
+    974,
+    282,
+    1906,
+    970
+  ],
+  "stopped_early": true,
+  "stop_epoch": 18,
+  "early_stopping_patience": 8,
+  "min_delta": 0.0,
+  "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_train.csv",
+  "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_val.csv"
+}

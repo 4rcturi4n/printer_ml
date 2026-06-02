@@ -1,0 +1,21 @@
+{
+  "fold": 3,
+  "best_epoch": 18,
+  "best_val_mae_phys": 0.2873689532279968,
+  "best_val_rmse_phys": 0.3789626993819445,
+  "best_bias_phys": 0.11357396095991135,
+  "target_mean": 1.239197190978491,
+  "target_std": 0.19643997682552927,
+  "use_log_target": true,
+  "embed_dim": 1024,
+  "num_train": 69,
+  "num_val": 17,
+  "elapsed_seconds": 0.363497257232666,
+  "history_csv": "/files/private/notebooks/printer_ml/results/vjepa2_cached_kfold/fold_3/history.csv",
+  "predictions_csv": "/files/private/notebooks/printer_ml/results/vjepa2_cached_kfold/fold_3/val_predictions.csv",
+  "best_model_path": "/files/private/notebooks/printer_ml/results/vjepa2_cached_kfold/fold_3/model_best.pth",
+  "train_embeddings_path": "/files/private/notebooks/printer_ml/results/vjepa2_embeddings/fold_3/train_embeddings.pt",
+  "val_embeddings_path": "/files/private/notebooks/printer_ml/results/vjepa2_embeddings/fold_3/val_embeddings.pt",
+  "stopped_early": true,
+  "stop_epoch": 26
+}

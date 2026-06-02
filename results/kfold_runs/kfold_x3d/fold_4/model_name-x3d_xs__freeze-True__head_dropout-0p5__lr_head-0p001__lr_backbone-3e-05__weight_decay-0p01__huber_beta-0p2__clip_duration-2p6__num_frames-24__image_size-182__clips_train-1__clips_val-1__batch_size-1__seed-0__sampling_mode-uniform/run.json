@@ -1,0 +1,43 @@
+{
+  "cfg": {
+    "model_name": "x3d_xs",
+    "freeze": true,
+    "epochs_head": 8,
+    "epochs_ft": 20,
+    "lr_head": 0.001,
+    "lr_backbone": 3e-05,
+    "weight_decay": 0.01,
+    "huber_beta": 0.2,
+    "head_dropout": 0.5,
+    "early_patience": 7,
+    "min_delta": 0.0001,
+    "sched_patience": 3,
+    "clip_duration": 2.6,
+    "num_frames": 24,
+    "image_size": 182,
+    "clips_train": 1,
+    "clips_val": 1,
+    "batch_size": 1,
+    "num_workers": 0,
+    "sampling_mode": "uniform",
+    "uniform_eps_sec": 0.03333333333333333,
+    "uniform_jitter": 0.2,
+    "seed": 0,
+    "runs_dir": "runs/kfold_x3d/fold_4",
+    "results_csv": "runs/kfold_x3d/kfold_results.csv",
+    "print_every_epoch": true,
+    "fold": 4
+  },
+  "timestamp": "2026-04-28 11:20:50",
+  "best_epoch": 20,
+  "best_val_loss": 0.48855573683977127,
+  "y_mean": 1.2338757365559598,
+  "y_std": 0.2011106811108622,
+  "final_metrics": {
+    "val_mae_phys": 0.3999915025242075,
+    "val_rmse_phys": 0.5030625586894396,
+    "bias_phys": 0.021949005777529444
+  },
+  "run_dir": "runs/kfold_x3d/fold_4/model_name-x3d_xs__freeze-True__head_dropout-0p5__lr_head-0p001__lr_backbone-3e-05__weight_decay-0p01__huber_beta-0p2__clip_duration-2p6__num_frames-24__image_size-182__clips_train-1__clips_val-1__batch_size-1__seed-0__sampling_mode-uniform",
+  "device": "cpu"
+}

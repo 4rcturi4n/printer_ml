@@ -1,0 +1,15 @@
+pyproject.toml
+src/gradcam/__init__.py
+src/gradcam/gradcam_utils.py
+src/gradcam/gradcam_video.py
+src/printer_ml/__init__.py
+src/printer_ml/dataset_maker.py
+src/printer_ml/reg_baselines.py
+src/printer_ml/split_dataset.py
+src/printer_ml/train_reg.py
+src/printer_ml/train_reg_low_tf.py
+src/printer_ml.egg-info/PKG-INFO
+src/printer_ml.egg-info/SOURCES.txt
+src/printer_ml.egg-info/dependency_links.txt
+src/printer_ml.egg-info/requires.txt
+src/printer_ml.egg-info/top_level.txt

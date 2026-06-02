@@ -1,0 +1,8 @@
+{
+  "seed": 0,
+  "val_frac": 0.2,
+  "n": 86,
+  "n_train": 68,
+  "n_val": 18,
+  "bins": 4
+}

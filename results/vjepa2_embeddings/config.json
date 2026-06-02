@@ -1,0 +1,20 @@
+{
+  "split_dir": "/files/private/notebooks/printer_ml/data/processed/kfold_splits",
+  "out_dir": "/files/private/notebooks/printer_ml/results/vjepa2_embeddings",
+  "video_col": "video_path",
+  "target_col": "axial_resolution",
+  "n_splits": 5,
+  "hf_model_name": "facebook/vjepa2-vitl-fpc64-256",
+  "num_frames": 64,
+  "image_size": 256,
+  "crop_box": [
+    974,
+    282,
+    1906,
+    970
+  ],
+  "use_log_target": true,
+  "batch_size": 1,
+  "num_workers": 2,
+  "seed": 42
+}
