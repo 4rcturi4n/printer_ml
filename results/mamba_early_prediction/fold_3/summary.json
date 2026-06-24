@@ -1,0 +1,21 @@
+{
+  "fold": 3,
+  "best_epoch": 30,
+  "best_val_mae_phys": 0.23529714345932007,
+  "best_val_rmse_phys": 0.38945507328384055,
+  "best_bias_phys": 0.1871117353439331,
+  "mean_ept_pct": 71.3472485768501,
+  "pct_videos_ept_found": 58.82352941176471,
+  "ept_threshold_um": 0.2,
+  "stopped_early": true,
+  "stop_epoch": 40,
+  "target_mean": 1.239197190978491,
+  "target_std": 0.19643997682552927,
+  "num_train": 69,
+  "num_val": 17,
+  "history_csv": "/files/private/notebooks/printer_ml/results/mamba_early_prediction/fold_3/history.csv",
+  "model_best": "/files/private/notebooks/printer_ml/results/mamba_early_prediction/fold_3/model_best.pth",
+  "mae_per_timestep_csv": "/files/private/notebooks/printer_ml/results/mamba_early_prediction/fold_3/mae_per_timestep.csv",
+  "ept_summary_csv": "/files/private/notebooks/printer_ml/results/mamba_early_prediction/fold_3/ept_summary.csv",
+  "per_video_csv": "/files/private/notebooks/printer_ml/results/mamba_early_prediction/fold_3/val_predictions_per_timestep.csv"
+}

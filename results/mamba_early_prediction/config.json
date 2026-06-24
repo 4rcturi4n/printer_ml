@@ -1,0 +1,33 @@
+{
+  "split_dir": "/files/private/notebooks/printer_ml/data/processed/kfold_splits",
+  "video_col": "video_path",
+  "target_col": "axial_resolution",
+  "crop_box": [
+    974,
+    282,
+    1906,
+    970
+  ],
+  "out_dir": "/files/private/notebooks/printer_ml/results/mamba_early_prediction",
+  "n_splits": 5,
+  "dinov2_model": "dinov2_vits14",
+  "num_frames": 32,
+  "image_size": 224,
+  "n_mamba_layers": 2,
+  "d_state": 16,
+  "d_conv": 4,
+  "expand": 2,
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "batch_size": 2,
+  "epochs": 60,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 10,
+  "min_delta": 0.0,
+  "use_log_target": true,
+  "ept_threshold_um": 0.2,
+  "num_workers": 4,
+  "seed": 42,
+  "max_trajectory_plots": 10
+}
