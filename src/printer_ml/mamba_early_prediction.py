@@ -225,6 +225,65 @@ def _build_mamba_layer(d_model: int, d_state: int, d_conv: int, expand: int) -> 
 
 
 # --------------------------------------------------
+# Sequence head: stacked Mamba layers + per-timestep MLP head
+#
+# Pulled out of MambaEarlyPredictor so it can be reused directly on
+# pre-cached DINOv2 embeddings (no backbone, no video I/O) — see
+# mamba_cached_regression.py.
+# --------------------------------------------------
+
+class MambaSequenceRegressor(nn.Module):
+    """
+    1. Stacked Mamba layers process an embedding sequence causally → [B, T, D]
+    2. MLP head predicts axial resolution at every timestep → [B, T]
+
+    Takes already-encoded embeddings [B, T, D] as input (e.g. cached
+    frozen-DINOv2 output) — no image encoder inside this module.
+    """
+
+    def __init__(
+        self,
+        embed_dim:      int,
+        n_mamba_layers: int = 2,
+        d_state:        int = 16,
+        d_conv:         int = 4,
+        expand:         int = 2,
+        hidden_dim:     int = 256,
+        dropout:        float = 0.2,
+    ):
+        super().__init__()
+
+        # residual Mamba blocks with pre-norm
+        # automatically uses mamba_ssm CUDA kernels when available
+        self.mamba_blocks = nn.ModuleList([
+            nn.ModuleDict({
+                "norm":  nn.LayerNorm(embed_dim),
+                "mamba": _build_mamba_layer(embed_dim, d_state=d_state, d_conv=d_conv, expand=expand),
+            })
+            for _ in range(n_mamba_layers)
+        ])
+
+        self.head = nn.Sequential(
+            nn.LayerNorm(embed_dim),
+            nn.Linear(embed_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dim, 1),
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        x: [B, T, D] embeddings
+        returns: [B, T]  — prediction at every timestep
+        """
+        for block in self.mamba_blocks:
+            x = x + block["mamba"](block["norm"](x))
+
+        preds = self.head(x).squeeze(-1)   # [B, T]
+        return preds
+
+
+# --------------------------------------------------
 # Full model: DINOv2 per-frame + Mamba + per-timestep head
 # --------------------------------------------------
 
@@ -260,22 +319,16 @@ class MambaEarlyPredictor(nn.Module):
             "dinov2_vitg14": 1536,
         }[dinov2_name]
 
-        # residual Mamba blocks with pre-norm
-        # automatically uses mamba_ssm CUDA kernels when available
-        self.mamba_blocks = nn.ModuleList([
-            nn.ModuleDict({
-                "norm":  nn.LayerNorm(embed_dim),
-                "mamba": _build_mamba_layer(embed_dim, d_state=d_state, d_conv=d_conv, expand=expand),
-            })
-            for _ in range(n_mamba_layers)
-        ])
+        self.embed_dim = embed_dim
 
-        self.head = nn.Sequential(
-            nn.LayerNorm(embed_dim),
-            nn.Linear(embed_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim, 1),
+        self.sequence_regressor = MambaSequenceRegressor(
+            embed_dim=embed_dim,
+            n_mamba_layers=n_mamba_layers,
+            d_state=d_state,
+            d_conv=d_conv,
+            expand=expand,
+            hidden_dim=hidden_dim,
+            dropout=dropout,
         )
 
     @torch.no_grad()
@@ -292,12 +345,7 @@ class MambaEarlyPredictor(nn.Module):
         returns: [B, T]  — prediction at every timestep
         """
         x = self.encode_frames(frames)
-
-        for block in self.mamba_blocks:
-            x = x + block["mamba"](block["norm"](x))
-
-        preds = self.head(x).squeeze(-1)   # [B, T]
-        return preds
+        return self.sequence_regressor(x)
 
 
 # --------------------------------------------------
