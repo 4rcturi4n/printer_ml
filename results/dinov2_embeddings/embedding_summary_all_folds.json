@@ -1,0 +1,85 @@
+{
+  "cfg": {
+    "split_dir": "/files/private/notebooks/printer_ml/data/processed/kfold_splits",
+    "out_dir": "/files/private/notebooks/printer_ml/results/dinov2_embeddings",
+    "video_col": "video_path",
+    "target_col": "axial_resolution",
+    "n_splits": 5,
+    "dinov2_model": "dinov2_vits14",
+    "num_frames": 32,
+    "image_size": 224,
+    "crop_box": [
+      974,
+      282,
+      1906,
+      970
+    ],
+    "use_log_target": true,
+    "n_bins": 4,
+    "min_variants": 1,
+    "max_variants": 5,
+    "seed": 42
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_1_train.csv",
+      "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_1_val.csv",
+      "num_train_videos": 68,
+      "num_train_rows": 68,
+      "num_val": 18,
+      "target_mean": 1.238716394879256,
+      "target_std": 0.1982112467198039,
+      "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_1/train_embeddings.pt",
+      "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_1/val_embeddings.pt"
+    },
+    {
+      "fold": 2,
+      "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_2_train.csv",
+      "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_2_val.csv",
+      "num_train_videos": 69,
+      "num_train_rows": 273,
+      "num_val": 17,
+      "target_mean": 1.2483096000314406,
+      "target_std": 0.1597176010336297,
+      "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_2/train_embeddings.pt",
+      "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_2/val_embeddings.pt"
+    },
+    {
+      "fold": 3,
+      "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_train.csv",
+      "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_val.csv",
+      "num_train_videos": 69,
+      "num_train_rows": 273,
+      "num_val": 17,
+      "target_mean": 1.239197190978491,
+      "target_std": 0.19643997682552927,
+      "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_3/train_embeddings.pt",
+      "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_3/val_embeddings.pt"
+    },
+    {
+      "fold": 4,
+      "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_4_train.csv",
+      "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_4_val.csv",
+      "num_train_videos": 69,
+      "num_train_rows": 273,
+      "num_val": 17,
+      "target_mean": 1.2338757365559598,
+      "target_std": 0.1996480386366656,
+      "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_4/train_embeddings.pt",
+      "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_4/val_embeddings.pt"
+    },
+    {
+      "fold": 5,
+      "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_5_train.csv",
+      "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_5_val.csv",
+      "num_train_videos": 69,
+      "num_train_rows": 273,
+      "num_val": 17,
+      "target_mean": 1.2370949771878756,
+      "target_std": 0.20076885633598487,
+      "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_5/train_embeddings.pt",
+      "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_5/val_embeddings.pt"
+    }
+  ]
+}

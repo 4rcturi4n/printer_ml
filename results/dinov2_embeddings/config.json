@@ -1,0 +1,21 @@
+{
+  "split_dir": "/files/private/notebooks/printer_ml/data/processed/kfold_splits",
+  "out_dir": "/files/private/notebooks/printer_ml/results/dinov2_embeddings",
+  "video_col": "video_path",
+  "target_col": "axial_resolution",
+  "n_splits": 5,
+  "dinov2_model": "dinov2_vits14",
+  "num_frames": 32,
+  "image_size": 224,
+  "crop_box": [
+    974,
+    282,
+    1906,
+    970
+  ],
+  "use_log_target": true,
+  "n_bins": 4,
+  "min_variants": 1,
+  "max_variants": 5,
+  "seed": 42
+}

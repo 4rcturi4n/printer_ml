@@ -1,0 +1,12 @@
+{
+  "fold": 1,
+  "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_1_train.csv",
+  "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_1_val.csv",
+  "num_train_videos": 68,
+  "num_train_rows": 68,
+  "num_val": 18,
+  "target_mean": 1.238716394879256,
+  "target_std": 0.1982112467198039,
+  "train_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_1/train_embeddings.pt",
+  "val_embeddings": "/files/private/notebooks/printer_ml/results/dinov2_embeddings/fold_1/val_embeddings.pt"
+}

@@ -1,0 +1,32 @@
+{
+  "embeddings_dir": "/files/private/notebooks/printer_ml/results/dinov2_embeddings",
+  "out_dir": "/files/private/notebooks/printer_ml/results/mamba_cached_kfold",
+  "n_splits": 5,
+  "n_mamba_layers": 2,
+  "d_state": 16,
+  "d_conv": 4,
+  "expand": 2,
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "batch_size": 4,
+  "epochs": 100,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 10,
+  "min_delta": 0.0,
+  "ept_threshold_um": 0.2,
+  "n_bins": 4,
+  "augment_kwargs": {
+    "noise_prob": 0.8,
+    "noise_sigma": 0.02,
+    "mask_prob": 0.3,
+    "mask_frac": 0.1,
+    "warp_prob": 0.2,
+    "warp_strength": 0.3,
+    "mixup_prob": 0.2,
+    "mixup_alpha": 0.3,
+    "mixup_target_tol": 0.5
+  },
+  "max_trajectory_plots": 10,
+  "seed": 42
+}
