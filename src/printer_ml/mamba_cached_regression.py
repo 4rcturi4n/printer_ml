@@ -74,7 +74,7 @@ class CachedMambaEmbeddingDataset(Dataset):
         Step 4: inverse-frequency weight per row, based on which target
         quantile bin it falls in. Feed this to WeightedRandomSampler.
         """
-        y = self.targets_phys.numpy()
+        y = np.log(self.targets_phys.numpy())
         bins = pd.qcut(y, q=n_bins, duplicates="drop")
         codes = bins.codes
         counts = np.bincount(codes)

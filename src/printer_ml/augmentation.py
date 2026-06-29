@@ -148,7 +148,7 @@ def build_variant_plan(
 
     Returns: {video_id: [variant_name, ...]}
     """
-    bins = pd.qcut(df[target_col], q=n_bins, duplicates="drop")
+    bins = pd.qcut(np.log(df[target_col]), q=n_bins, duplicates="drop")
     bin_codes = bins.cat.codes
     bin_counts = bin_codes.value_counts()
 
