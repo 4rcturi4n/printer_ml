@@ -139,6 +139,7 @@ def build_variant_plan(
     n_bins: int = 4,
     min_variants: int = 1,
     max_variants: int = 5,
+    global_bin_edges: np.ndarray = None,
 ) -> dict:
     """
     Decide how many (and which) augmented variants each video gets, based on
@@ -146,10 +147,24 @@ def build_variant_plan(
     (real, distinct DINOv2-encoded copies); common-bin videos get just the
     clean version.
 
+    global_bin_edges: bin edges computed from the FULL dataset using
+        np.histogram or pd.qcut on log(target). If provided, these fixed
+        edges are used instead of recomputing from df. This ensures that
+        truly rare videos are always rare regardless of fold composition.
+
     Returns: {video_id: [variant_name, ...]}
     """
-    bins = pd.qcut(np.log(df[target_col]), q=n_bins, duplicates="drop")
-    bin_codes = bins.cat.codes
+    log_vals = np.log(df[target_col].values.astype(float))
+
+    if global_bin_edges is not None:
+        # Use fixed global edges — rare videos stay rare across all folds
+        bin_codes_arr = np.digitize(log_vals, global_bin_edges[1:-1])
+    else:
+        # Fallback: compute from this df (not recommended for fold subsets)
+        _, edges = np.histogram(log_vals, bins=n_bins)
+        bin_codes_arr = np.digitize(log_vals, edges[1:-1])
+
+    bin_codes = pd.Series(bin_codes_arr, index=df.index)
     bin_counts = bin_codes.value_counts()
 
     max_count = bin_counts.max()
@@ -158,8 +173,8 @@ def build_variant_plan(
     augment_pool = ["blur", "bright", "noise", "crop"]
     plan = {}
 
-    for video_id, code in zip(df["video_id"], bin_codes):
-        count = bin_counts[code]
+    for video_id, code in zip(df["video_id"], bin_codes_arr):
+        count = bin_counts.get(code, 1)
         if max_count == min_count:
             rarity = 0.0
         else:

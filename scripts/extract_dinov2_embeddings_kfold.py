@@ -47,6 +47,7 @@ from printer_ml.augmentation import build_variant_plan, sample_video_frames_vari
 CFG = {
     "split_dir": os.path.join(ROOT, "data", "processed", "kfold_splits"),
     "out_dir":   os.path.join(ROOT, "results", "dinov2_embeddings"),
+    "data_csv":  os.path.join(ROOT, "data", "processed", "video_xl_dataset.csv"),
 
     "video_col":  "video_path",
     "target_col": "axial_resolution",
@@ -213,6 +214,17 @@ def extract_kfold_embeddings(cfg):
     for p in backbone.parameters():
         p.requires_grad = False
 
+    # Compute global bin edges from the full dataset once.
+    # This ensures rare videos are always rare regardless of fold composition.
+    # Without this, qcut on each fold's training data creates equal-count bins
+    # making all rarity scores ~0 and everyone gets only clean variants.
+    df_full = pd.read_csv(cfg["data_csv"])
+    df_full = df_full[pd.to_numeric(df_full[cfg["target_col"]], errors="coerce").notna()].copy()
+    df_full[cfg["target_col"]] = df_full[cfg["target_col"]].astype(float)
+    log_vals_full = np.log(df_full[cfg["target_col"]].values.astype(float))
+    _, global_bin_edges = np.histogram(log_vals_full, bins=cfg["n_bins"])
+    print(f"Global bin edges (log scale): {global_bin_edges}")
+
     summary = []
 
     for fold in range(1, cfg["n_splits"] + 1):
@@ -240,6 +252,7 @@ def extract_kfold_embeddings(cfg):
             n_bins=cfg["n_bins"],
             min_variants=cfg["min_variants"],
             max_variants=cfg["max_variants"],
+            global_bin_edges=global_bin_edges,
         )
 
         fold_info = {
