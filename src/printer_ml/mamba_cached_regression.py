@@ -125,9 +125,8 @@ def train_cached_mamba_fold(fold: int, cfg: dict, device: torch.device):
 
     sample_weights = train_dataset.bin_sample_weights(n_bins=cfg["n_bins"])
     sampler = WeightedRandomSampler(
-        weights=sample_weights, num_samples=len(sample_weights), replacement=True
+       weights=sample_weights, num_samples=len(sample_weights), replacement=True
     )
-
     train_loader = DataLoader(
         train_dataset, batch_size=cfg["batch_size"], sampler=sampler,
         num_workers=0,
