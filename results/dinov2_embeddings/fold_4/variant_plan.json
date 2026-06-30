@@ -1,413 +1,270 @@
 {
   "250617\\p15_v1000_z4": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p15.5_v1000_z4": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p16_v1000_z4": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p17_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p18.5_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p18_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p19.5_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p20.5_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250617\\p20_v1000_z5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\10,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\10": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\12": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\13,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\13": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\14,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\15": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250624\\5": [
-    "clean"
-  ],
-  "250624\\6,5": [
-    "clean"
-  ],
-  "250624\\6": [
-    "clean"
-  ],
-  "250624\\7": [
-    "clean"
-  ],
-  "250624\\8,5": [
-    "clean"
-  ],
-  "250624\\8": [
-    "clean"
-  ],
-  "250624\\9,5": [
     "clean",
     "blur",
     "bright",
     "noise",
     "crop"
+  ],
+  "250624\\6,5": [
+    "clean",
+    "blur",
+    "bright",
+    "noise"
+  ],
+  "250624\\6": [
+    "clean",
+    "blur",
+    "bright",
+    "noise"
+  ],
+  "250624\\7": [
+    "clean",
+    "blur",
+    "bright",
+    "noise"
+  ],
+  "250624\\8,5": [
+    "clean",
+    "blur",
+    "bright",
+    "noise"
+  ],
+  "250624\\8": [
+    "clean",
+    "blur",
+    "bright",
+    "noise"
+  ],
+  "250624\\9,5": [
+    "clean"
   ],
   "250624\\9": [
     "clean",
     "blur",
     "bright",
-    "noise",
-    "crop"
+    "noise"
   ],
   "250627\\10,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\10": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\11.5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\11": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\12,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\12": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\13": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\14,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250627\\3,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250627\\7": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250627\\8,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250627\\9": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\10,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\10": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\11,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\11": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\12": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\13,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\13": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\14,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\14": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\15": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250710\\5,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250710\\5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250710\\6": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\7,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\7": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\8,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\8": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\9,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\9": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250715\\11,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\13,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\13": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\14,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\14": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\15,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\15": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\16,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\17,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\17": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\18,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\18": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\19,5": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ],
   "250715\\20": [
-    "clean",
-    "blur",
-    "bright",
-    "noise",
-    "crop"
+    "clean"
   ]
 }

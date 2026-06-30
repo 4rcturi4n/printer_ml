@@ -1,6 +1,7 @@
 {
   "split_dir": "/files/private/notebooks/printer_ml/data/processed/kfold_splits",
   "out_dir": "/files/private/notebooks/printer_ml/results/dinov2_embeddings",
+  "data_csv": "/files/private/notebooks/printer_ml/data/processed/video_xl_dataset.csv",
   "video_col": "video_path",
   "target_col": "axial_resolution",
   "n_splits": 5,

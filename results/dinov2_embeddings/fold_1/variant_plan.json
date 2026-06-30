@@ -60,25 +60,47 @@
     "clean"
   ],
   "250624\\5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250624\\6,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\6": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\7,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\7": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\8,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\8": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250624\\9,5": [
     "clean"
@@ -114,13 +136,23 @@
     "clean"
   ],
   "250627\\3,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250627\\5,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250627\\8": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250627\\9.5": [
     "clean"
@@ -150,25 +182,47 @@
     "clean"
   ],
   "250710\\5,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise",
+    "crop"
   ],
   "250710\\6.5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\6": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\7,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\7": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\8": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250710\\9,5": [
-    "clean"
+    "clean",
+    "blur",
+    "bright",
+    "noise"
   ],
   "250715\\11,5": [
     "clean"

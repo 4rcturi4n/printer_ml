@@ -3,7 +3,7 @@
   "train_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_train.csv",
   "val_csv": "/files/private/notebooks/printer_ml/data/processed/kfold_splits/fold_3_val.csv",
   "num_train_videos": 69,
-  "num_train_rows": 273,
+  "num_train_rows": 129,
   "num_val": 17,
   "target_mean": 1.239197190978491,
   "target_std": 0.19643997682552927,
