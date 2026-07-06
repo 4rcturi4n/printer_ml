@@ -76,10 +76,15 @@ def sample_video_frames_variant(
     num_frames: int = 32,
     image_size: int = 224,
     crop_box=None,
+    skip_seconds: float = 2.0,
 ):
     """
     Same loading logic as mamba_early_prediction.sample_video_frames, but
     applies a named frame-level augmentation BEFORE resize/normalize.
+
+    skip_seconds: skip this many seconds from the start of the video before
+    sampling — no video in this dataset starts printing before this point,
+    so it's a safe floor that trims dead time without risking real signal.
     """
     augment_fn = VARIANT_FUNCS[variant_name]
 
@@ -92,7 +97,11 @@ def sample_video_frames_variant(
         cap.release()
         raise RuntimeError(f"Video has no frames: {video_path}")
 
-    frame_indices = np.linspace(0, total_frames - 1, num_frames).astype(int)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    skip_frames = int(fps * skip_seconds) if fps > 0 else 0
+    skip_frames = min(skip_frames, max(total_frames - 1, 0))
+
+    frame_indices = np.linspace(skip_frames, total_frames - 1, num_frames).astype(int)
     mean_arr = np.array([0.485, 0.456, 0.406], dtype=np.float32)
     std_arr = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 

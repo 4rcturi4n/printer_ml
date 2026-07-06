@@ -57,6 +57,7 @@ CFG = {
     "dinov2_model": "dinov2_vits14",
     "num_frames":   32,
     "image_size":   224,
+    "skip_seconds": 2.0,
 
     "crop_box": CROP_BOX,
 
@@ -155,6 +156,7 @@ def extract_split_embeddings(
                 num_frames=cfg["num_frames"],
                 image_size=cfg["image_size"],
                 crop_box=cfg["crop_box"],
+                skip_seconds=cfg["skip_seconds"],
             )
 
             emb = encode_frames(backbone, frames, device)  # [T, D]
